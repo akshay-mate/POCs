@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "34c913ea-6a7e-46d9-820f-90ab4fd52e62",
+		"name": "signature2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "simple",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerFirstName\": \"Demo\",\r\n    \"customerLastName\": \"Test\",\r\n    \"paymentRequestId\": \"123\",\r\n    \"country\": \"USA\",\r\n    \"vendorName\": \"CyberSource\",\r\n    \"referenceNumber\": \"123\",\r\n    \"signedFields\": \"customerFirstName,customerLastName\",\r\n    \"SecretKey\": \"c29a88baebd14ee38d64fecdf11434a94edbbb548e7640bca616305069e2e05d2ff2390074a24678937495a07c83fc319b11ed0a73434337bd76fff3a122dace13492ebea2b240709dd2599e450afca1ab862488059040f89c1b5100f4934bdffac1a98b62e94a50b41246d6b5b42561932f4818050749478a5316b64d17e442\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signature/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signature",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerFirstName\": \"Demo\",\r\n    \"customerLastName\": \"Test\",\r\n    \"paymentRequestId\": \"123\",\r\n    \"country\": \"USA\",\r\n    \"vendorName\": \"CyberSource\",\r\n    \"referenceNumber\": \"123\",\r\n    \"transactionUuid\": \"b10f42eb-d97a-43ad-927b-76aab72b9d84\",\r\n    \"requestTimestamp\": \"2022-02-08T09:52:07Z\",\r\n    \"locale\": \"en-US\",\r\n    \"currency\": \"USD\",\r\n    \"amount\": \"100.00\",\r\n    \"taxAmount\": \"10.00\",\r\n    \"requestType\": \"CreateToken\",\r\n    \"recurringFrequency\": \"monthly\",\r\n    \"recurringAmount\": \"50.00\",\r\n    \"recurringInstallments\": \"5\",\r\n    \"customerIpaddress\": \"10.0.0.5\",\r\n    \"customerCookiesAccepted\": \"true\",\r\n    \"customerId\": \"707070\",\r\n    \"orderId\": \"10001\",\r\n    \"orderDate\": \"Tue Feb 08 2022 15:22:33 GMT+0530 (India Standard Time)\",\r\n    \"billToCompanyName\": \"Billing Tupperware\",\r\n    \"billToPhone\": \"67491123\",\r\n    \"billtoEmail\": \"billing@tupperware.com\",\r\n    \"billToAddressLine1\": \"3028A Ubi Road 3 #01-89\",\r\n    \"billToAddressLine2\": \"408657, Singapore\",\r\n    \"billToAddressCity\": \"Singapore\",\r\n    \"billToAddressState\": \"Singapore\",\r\n    \"billToAddressCountry\": \"SG\",\r\n    \"billToAddressPostalCode\": \"408657\",\r\n    \"signedFields\": \"customerFirstName,customerLastName\",\r\n     \"SecretKey\": \"c29a88baebd14ee38d64fecdf11434a94edbbb548e7640bca616305069e2e05d2ff2390074a24678937495a07c83fc319b11ed0a73434337bd76fff3a122dace13492ebea2b240709dd2599e450afca1ab862488059040f89c1b5100f4934bdffac1a98b62e94a50b41246d6b5b42561932f4818050749478a5316b64d17e442\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signature/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signature",
+						"post"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
