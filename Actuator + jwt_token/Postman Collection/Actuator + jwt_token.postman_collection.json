@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "56baf83f-75b5-41c6-b44d-f38890c18b9c",
+		"name": "jwt_token",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"ganesh\",\r\n    \"userFirstName\":\"ganesh\",\r\n    \"userLastName\":\"kale\",\r\n    \"userPassword\":\"ganesh@kale\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/registerNewUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registerNewUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authentication for admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"admin123\",\r\n    \"userPassword\":\"admin@pass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authentication for user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"sushant\",\r\n    \"userPassword\":\"sushant@sangale\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "to check user token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnYW5lc2giLCJleHAiOjE2NDEyMjg3ODksImlhdCI6MTY0MTIxMDc4OX0.mYipvFtM-tZE471lvoyLQ24PV91rEoguAOPZwnIKFVHoFz8Ob06-wWG4D0bZl8bCrxrUKk0fuKIKB-lRkYN7Bg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/forUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "to check admin token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjEyMyIsImV4cCI6MTY0MDI1MDkwNSwiaWF0IjoxNjQwMjMyOTA1fQ.ray9Bo9Mka3BqD4o8BDkzY6dUHrI2wfYh-grISJ4UCK8b1s8MotpnY4zbK4wRCXm82cRivmZMHl8u-uTneDjEw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/forAdmin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actuator/info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnYW5lc2giLCJleHAiOjE2NDEzMjk0NDcsImlhdCI6MTY0MTMxMTQ0N30.-qj4N4IVudGhtSZW49WjNGj55XsjPMbIXB8cqUUTh1tYhHT8p4KzQuBXzQW39ansdaIB3U4FeF9ZMCVZom-0EA",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/actuator/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"info"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
